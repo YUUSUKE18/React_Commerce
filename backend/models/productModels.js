@@ -37,7 +37,7 @@ const productSchema = mongoose.Schema(
         required: true
     },
     category: {
-        type: Boolean,
+        type: String,
         required: true
     },
     description: {
@@ -56,7 +56,7 @@ const productSchema = mongoose.Schema(
         default: 0
     },
     price: {
-       type: Number,
+       type: String,
         required: true,
         default: 0
     },
