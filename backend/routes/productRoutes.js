@@ -7,7 +7,6 @@ import Product from '../models/productModels.js'
 // acess Public
 router.get("/", expressAsyncHandler(async (req,res) => {
     const products = await Product.find({})
-
     res.json(products)
 }))
 
@@ -15,7 +14,6 @@ router.get("/", expressAsyncHandler(async (req,res) => {
 // acess Public
 router.get("/:id", expressAsyncHandler(async(req,res) => {
     const product = await Product.findById(req.params.id)
-
     if(product){
         res.json(product)
     } else {
